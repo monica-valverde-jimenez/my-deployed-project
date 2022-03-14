@@ -18,12 +18,8 @@ jobs:
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
           aws-region: AWS_DEFAULT_REGION
   deploy-api:
-    # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
-    # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
     docker:
       - image: cimg/base:stable
-    # Add steps to the job
-    # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
       - node/install
       - checkout
@@ -40,10 +36,35 @@ jobs:
           name: "Udagram-api Deploying to Elastic beanstalk"
           command: |
             npm run backend:deploy
-# Invoke jobs via workflows
-# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
+  deploy-frontend:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - node/install
+      - checkout
+      - aws-cli/setup:
+          aws-access-key-id: AWS_ACCESS_KEY_ID
+          aws-secret-access-key: AWS_SECRET_ACCESS_KEY
+          aws-region: AWS_DEFAULT_REGION
+      - run:
+          name: "Udagram-frontend Install"
+          command: |
+            npm run frontend:install
+      - run:
+          name: "Udagram-frontend test"
+          command: |
+            npm run frontend:test
+      - run:
+          name: "Udagram-frontend build"
+          command: |
+            npm run frontend:build
+      - run:
+          name: "Udagram-api Deploying to S3 bucket"
+          command: |
+            npm run frontend:deploy
 workflows:
   deploy-full-project-workflow:
     jobs:
       - aws-cli-cred-setup
       - deploy-api
+      - deploy-frontend
