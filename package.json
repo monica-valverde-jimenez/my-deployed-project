@@ -1,5 +1,9 @@
 
 {
-    "scripts": {},
-    "devDependencies": {}
+	"scripts": {
+		"backend:install": "cd udagram-api && npm install",
+		"backend:test": "cd udagram-api && npm run test",
+		"backend:build": "cd udagram-api && npm run build"
+	},
+	"devDependencies": {}
 }
