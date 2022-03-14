@@ -38,5 +38,5 @@ workflows:
   deploy-full-project-workflow:
     jobs:
       - aws-cli-cred-setup:
-        context: aws
+          context: aws
       - deploy-api
