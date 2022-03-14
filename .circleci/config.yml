@@ -11,9 +11,9 @@ jobs:
     executor: aws-cli/default
     steps:
       - aws-cli/setup:
-        aws-access-key-id: AWS_ACCESS_KEY
-        aws-secret-access-key: AWS_SECRET
-        aws-region: AWS_REGION
+          aws-access-key-id: AWS_ACCESS_KEY
+          aws-secret-access-key: AWS_SECRET
+          aws-region: AWS_REGION
   deploy-api:
     # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
