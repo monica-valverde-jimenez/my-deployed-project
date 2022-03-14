@@ -32,7 +32,8 @@ jobs:
     docker:
       - image: cimg/base:stable
     steps:
-      - node/install
+      - node/install:
+        node-version: '16.13'
       - browser-tools/install-chrome
       - checkout
       - aws-cli/setup:
