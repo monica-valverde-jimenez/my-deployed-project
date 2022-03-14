@@ -32,8 +32,7 @@ jobs:
             npm run backend:deploy
   deploy-frontend:
     docker:
-      - image: cimg/base:stable
-      #- image: cimg/node:16.8.0-browsers
+      - image: cimg/node:16.8.0-browsers
     steps:
       - node/install:
         node-version: '16.13'
@@ -68,10 +67,10 @@ jobs:
 workflows:
   deploy-full-project-workflow:
     jobs:
-      #- deploy-api:
-      #  filters:
-      #    branches:
-      #     only: master
+      - deploy-api:
+        filters:
+          branches:
+           only: master
       - deploy-frontend:
         filters:
           branches:
