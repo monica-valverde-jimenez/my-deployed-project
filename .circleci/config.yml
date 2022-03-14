@@ -35,7 +35,6 @@ jobs:
           name: "Udagram-api build"
           command: |
             npm run backend:build
-      - eb/setup
       - run:
           name: "Udagram-api Deploying to Elastic beanstalk"
           command: |
