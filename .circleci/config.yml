@@ -27,6 +27,7 @@ jobs:
     steps:
       - node/install
       - checkout
+      - eb/setup
       - run:
           name: "Udagram-api Install"
           command: |
