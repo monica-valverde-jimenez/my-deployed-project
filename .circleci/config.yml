@@ -66,10 +66,6 @@ jobs:
 workflows:
   deploy-full-project-workflow:
     jobs:
-      - deploy-api:
-        filters:
-          branches:
-            only: master
       - deploy-frontend:
         filters:
           branches:
