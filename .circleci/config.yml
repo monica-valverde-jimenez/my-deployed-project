@@ -66,11 +66,11 @@ jobs:
             npm run frontend:deploy
 workflows:
   deploy-full-project-workflow:
-    - build:
-      filters:
-        branches:
-          only: master
     jobs:
       - aws-cli-cred-setup
       - deploy-api
       - deploy-frontend
+      - build:
+      filters:
+        branches:
+          only: master
