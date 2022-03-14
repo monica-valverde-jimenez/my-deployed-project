@@ -27,7 +27,7 @@ jobs:
     steps:
       - node/install
       - checkout
-      - eb/setup
+      - aws-elastic-beanstalk/setup
       - run:
           name: "Udagram-api Install"
           command: |
