@@ -58,11 +58,11 @@ jobs:
 workflows:
   deploy-full-project-workflow:
     jobs:
-      - deploy-api
+      - deploy-api:
         filters:
           branches:
             only: master
-      - deploy-frontend
+      - deploy-frontend:
         filters:
           branches:
             only: master
