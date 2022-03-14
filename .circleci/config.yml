@@ -22,11 +22,7 @@ jobs:
           command: |
             npm run backend:install
       - run:
-          name: "Udagram-api Test"
-          command: |
-            npm run backend:test
-      - run:
-          name: "Udagram-api buil"
+          name: "Udagram-api build"
           command: |
             npm run backend:build
 # Invoke jobs via workflows
