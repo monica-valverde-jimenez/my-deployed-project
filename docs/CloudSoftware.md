@@ -4,7 +4,7 @@ This project is using AWS services. AWS provides a massive global cloud infrastr
 
 ### Services
 
-The AWS serices selected for this project are RDS, Elastic beanstalk and S3 bucket.
+The AWS services selected for this project are RDS for database, Elastic beanstalk to host API and S3 bucket to host website.
 
 #### RDS
 
