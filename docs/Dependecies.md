@@ -2,11 +2,14 @@
 
 ## Backend dependecies
 > Express
-> Typescritp
+
+> Typescript
+
 > postgres
 
 ## Frontend dependecies
 > Angular
+
 > node v16.3
 
 
