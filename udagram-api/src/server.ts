@@ -22,8 +22,18 @@ import { V0_FEED_MODELS, V0_USER_MODELS } from "./controllers/v0/model.index";
 
   app.use(bodyParser.json());
 
-  app.use(cors());
-  app.options('*', cors()) // include before other routes
+  app.use(cors({
+    "origin": "*",
+    "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+    "preflightContinue": false,
+    "optionsSuccessStatus": 204
+  }));
+  app.options('*', cors({
+    "origin": "*",
+    "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+    "preflightContinue": false,
+    "optionsSuccessStatus": 204
+  })) // include before other routes
   app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Headers', '*');
@@ -39,7 +49,12 @@ import { V0_FEED_MODELS, V0_USER_MODELS } from "./controllers/v0/model.index";
   app.use("/api/v0/", IndexRouter);
 
   // Root URI call
-  app.get("/", cors(), async (req, res) => {
+  app.get("/", cors({
+    "origin": "*",
+    "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+    "preflightContinue": false,
+    "optionsSuccessStatus": 204
+  }), async (req, res) => {
     res.send("/api/v0/");
   });
 
