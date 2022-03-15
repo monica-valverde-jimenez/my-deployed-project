@@ -24,7 +24,7 @@ import { V0_FEED_MODELS, V0_USER_MODELS } from "./controllers/v0/model.index";
 
   app.use(cors({
     "origin": "*",
-    "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+    "methods": "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
     "preflightContinue": false,
     "optionsSuccessStatus": 204
   }));
@@ -38,6 +38,7 @@ import { V0_FEED_MODELS, V0_USER_MODELS } from "./controllers/v0/model.index";
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Headers', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS');
+    res.setHeader('Content-Type', 'application/json');
 
     if ('OPTIONS' === req.method) {
       res.sendStatus(200);
@@ -51,7 +52,7 @@ import { V0_FEED_MODELS, V0_USER_MODELS } from "./controllers/v0/model.index";
   // Root URI call
   app.get("/", cors({
     "origin": "*",
-    "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+    "methods": "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
     "preflightContinue": false,
     "optionsSuccessStatus": 204
   }), async (req, res) => {
