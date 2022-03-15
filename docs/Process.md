@@ -4,6 +4,10 @@ My-deployed-project contains a backend and frontend applications. Both applicati
 
 This document includes all of the steps, preprocess and activities that are required to complete a fullstack application deployment process.
 
+Database: 
+Backend: http://myapi-env.eba-qemju7wj.us-east-1.elasticbeanstalk.com/api/v0/feed
+Frontend public url: https://my-deploy-2022.s3.amazonaws.com/index.html
+
 See [Project dependecies](Dependecies.md).
 
 See [Cloud software](CloudSoftware.md).
