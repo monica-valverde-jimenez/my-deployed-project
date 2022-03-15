@@ -5,8 +5,12 @@ This repo contains a full configuration to deploy a Full-Stack application. It i
 
 ##Circle CI Status
 
-[![CircleCI](https://circleci.com/gh/monica-valverde-jimenez/my-deployed-project.svg?style=svg)](https://circleci.com/gh/monica-valverde-jimenez/my-deployed-project)
+[![CircleCI](https://circleci.com/gh/monica-valverde-jimenez/my-deployed-project/tree/master.svg?style=svg)](https://circleci.com/gh/monica-valverde-jimenez/my-deployed-project/tree/master)
 
+
+## Deployment process and Infrastructure
+
+Go to [Document deployment process](/docs/Process.md).
 
 ## Getting Started
 
