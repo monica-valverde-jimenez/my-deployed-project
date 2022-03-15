@@ -1,4 +1,4 @@
-#CI/CD Software
+# CI/CD Software
 My-deployed-project is implemented with CircleCI. A great aplication to automate the build, test and deploy. It is configure whenever there is commit in the code to **master** branch.
 
 Before pipeline process starts, this configuration should be completed:
@@ -10,7 +10,7 @@ Before pipeline process starts, this configuration should be completed:
 Create the following enviroment variables:
 ![CircleCI envs](./images/ci-envs.PNG)
 
-###Pipeline
+### Pipeline
 Orbs:
 * node: circleci/node@5.0.0
 * aws-cli: circleci/aws-cli@2.1.0
@@ -43,10 +43,12 @@ Steps:
 
 ![CircleCI frontend steps](./images/ci-frontend.PNG)
 
-##Diagram Backend
+## Diagram Backend
+
 ![CircleCI Backend diagram](./images/circleci.drawio-backend.png)
 
-##Diagram Frontend
+## Diagram Frontend
+
 ![CircleCI Frontend diagram](./images/circleci.drawio-frontend.png)
 
 Return to [Process](Process.md).

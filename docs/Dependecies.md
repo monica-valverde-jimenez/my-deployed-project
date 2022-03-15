@@ -1,11 +1,11 @@
-#Project dependecies
+# Project dependecies
 
-##Backend dependecies
+## Backend dependecies
 > Express
 > Typescritp
 > postgres
 
-##Frontend dependecies
+## Frontend dependecies
 > Angular
 > node v16.3
 

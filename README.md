@@ -1,4 +1,4 @@
-#My deployed project [my-deployed-project]
+# My deployed project [my-deployed-project]
 
 This repo contains a full configuration to deploy a Full-Stack application. It includes a started Udagram project with api project and frontend project. Also configuration files to run Circle CI, deploy to elastic beanstalk and S3 bucket.
 
