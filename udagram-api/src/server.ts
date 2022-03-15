@@ -25,10 +25,17 @@ import { V0_FEED_MODELS, V0_USER_MODELS } from "./controllers/v0/model.index";
   app.use(cors());
 
   app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    next();
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Headers', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
+
+    if ('OPTIONS' === req.method) {
+      res.sendStatus(200);
+    } else {
+      next();
+    }
   });
-  
+
   app.use("/api/v0/", IndexRouter);
 
   // Root URI call
