@@ -56,7 +56,7 @@ router.get('/signed-url/:fileName',
 
 // Create feed with metadata
 router.post('/',
-    requireAuth,
+    //requireAuth,
     async (req: Request, res: Response) => {
       const caption = req.body.caption;
       const fileName = req.body.url; // same as S3 key name
